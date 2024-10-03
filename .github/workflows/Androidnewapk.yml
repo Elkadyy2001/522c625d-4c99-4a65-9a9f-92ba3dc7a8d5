@@ -17,8 +17,8 @@ jobs:
     - name: Setup Project
       run: |
        wget -O "AppName.zip" "${{ secrets.PROJECTURL }}"
-       brew install sevenzip
-       7z x "AppName.zip"
+       # brew install sevenzip
+       # 7z x "AppName.zip"
      
     # - name: Generate KeyStore
     #   run: |
@@ -43,8 +43,7 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
       with:
-        path: |
-                 "AppName.zip"
+        path: "AppName.zip"
     # - name: Upload a Build Artifact2
     #   uses: actions/upload-artifact@v3.1.0
     #   with:
